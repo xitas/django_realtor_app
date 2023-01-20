@@ -147,3 +147,8 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'sendfrom@gmail.com'
 EMAIL_HOST_PASSWORD = 'gmail_app_password'
 EMAIL_USE_TLS = True
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
